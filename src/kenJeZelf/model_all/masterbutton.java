@@ -16,6 +16,7 @@ public class masterbutton {
 	Border borderbutton = BorderFactory.createLineBorder(Color.DARK_GRAY, 3);
 
 	public masterbutton(String name, String panelname, Color coler) {
+		//style van button
 		masterbutton.setText(name);
 		masterbutton.setFocusPainted(false);
 		masterbutton.setFont(new Font("Arial", Font.PLAIN, 25));
@@ -46,10 +47,12 @@ public class masterbutton {
 
 			}
 		});
+		// action listerner
 		masterbutton.addActionListener(e ->  screen_controller.showPanel(panelname));
 	}
-
+	// get button
 	public JButton getMasterbutton() {
 		return masterbutton;
 	}
+
 }

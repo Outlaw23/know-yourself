@@ -1,4 +1,4 @@
-package kenJeZelf.mian_screen;
+package kenJeZelf.question_screen;
 
 import kenJeZelf.model_all.masterbutton;
 import kenJeZelf.model_all.masterlabel;
@@ -9,8 +9,8 @@ import java.awt.*;
 import static java.awt.Color.*;
 import static java.awt.Color.gray;
 
-public class main_screen_view {
-	public JPanel mainscreen() {
+public class question_screen_view {
+	public JPanel questionscreen() {
 
 		// Create a new JPanel
 		JPanel panelMain = new JPanel();
@@ -37,22 +37,19 @@ public class main_screen_view {
 		//labels
 
 		// label title
-		masterlabel titel = new masterlabel("home", white);
+		masterlabel titel = new masterlabel("question", white);
 
-		// ken je zelf text
-		masterlabel hadotext = new masterlabel( "<html><font size=30>ken je zelf</font><br/>bij ken je zelf ga vragen beantwoorden "
-				+"over je zelf en leer je zelf steed beter kennen</html>", white);
 
 		// buttons
 
 		// button home
-		masterbutton home = new masterbutton("home","mainscreen", darkGray);
+		masterbutton home = new masterbutton("home","mainscreen", gray);
 
 		// button
 		masterbutton hado = new masterbutton("intro","introscreen",gray);
 
 		// button
-		masterbutton video = new masterbutton("question","questionscreen",gray);
+		masterbutton video = new masterbutton("question","questionscreen",darkGray);
 
 		// button
 		masterbutton analysis = new masterbutton("analysis","analysisscreen",gray);
@@ -67,9 +64,8 @@ public class main_screen_view {
 		panelMainNorth.add(hado.getMasterbutton());
 		panelMainNorth.add(video.getMasterbutton());
 		panelMainNorth.add(analysis.getMasterbutton());
-
 		// add to panel center
-		panelMainCenter.add(hadotext.getMasterLabel());
+
 
 		// Return the panel to be added to the JFrame
 		return panelMain;
