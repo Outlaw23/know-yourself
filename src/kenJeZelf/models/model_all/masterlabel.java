@@ -1,4 +1,4 @@
-package kenJeZelf.model_all;
+package kenJeZelf.models.model_all;
 
 import javax.swing.*;
 import java.awt.*;

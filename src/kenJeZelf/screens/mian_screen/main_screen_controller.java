@@ -1,4 +1,4 @@
-package kenJeZelf.mian_screen;
+package kenJeZelf.screens.mian_screen;
 
 public class main_screen_controller {
 

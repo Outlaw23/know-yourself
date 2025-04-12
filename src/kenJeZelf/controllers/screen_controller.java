@@ -1,9 +1,9 @@
-package kenJeZelf.controller;
+package kenJeZelf.controllers;
 
-import kenJeZelf.analysis_screen.analysis_screen_view;
-import kenJeZelf.intro_screen.intro_screen_view;
-import kenJeZelf.mian_screen.main_screen_view;
-import kenJeZelf.question_screen.question_screen_view;
+import kenJeZelf.screens.analysis_screen.analysis_screen_view;
+import kenJeZelf.screens.intro_screen.intro_screen_view;
+import kenJeZelf.screens.mian_screen.main_screen_view;
+import kenJeZelf.screens.question_screen.question_screen_view;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,7 +41,6 @@ public class screen_controller {
 		frame.add(mainPanel);
 		frame.setResizable(true);
 		frame.setVisible(true);
-
 	}
 
 	public static void showPanel(String panelname) {

@@ -1,7 +1,8 @@
-package kenJeZelf.model_all;
+package kenJeZelf.models.model_all;
 
 
-import kenJeZelf.controller.screen_controller;
+import kenJeZelf.controllers.screen_controller;
+import kenJeZelf.screens.intro_screen.intro_screen_model_questions;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -55,4 +56,7 @@ public class masterbutton {
 		return masterbutton;
 	}
 
+	public void handeler(JTextField textField, masterlabel label) {
+		masterbutton.addActionListener(e-> intro_screen_model_questions.questionHandeler(textField, label));
+	}
 }

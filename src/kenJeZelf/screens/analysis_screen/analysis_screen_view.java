@@ -1,16 +1,15 @@
-package kenJeZelf.question_screen;
+package kenJeZelf.screens.analysis_screen;
 
-import kenJeZelf.model_all.masterbutton;
-import kenJeZelf.model_all.masterlabel;
+import kenJeZelf.models.model_all.masterbutton;
+import kenJeZelf.models.model_all.masterlabel;
 
 import javax.swing.*;
 import java.awt.*;
 
 import static java.awt.Color.*;
-import static java.awt.Color.gray;
 
-public class question_screen_view {
-	public JPanel questionscreen() {
+public class analysis_screen_view {
+	public JPanel analysisscreen() {
 
 		// Create a new JPanel
 		JPanel panelMain = new JPanel();
@@ -37,7 +36,7 @@ public class question_screen_view {
 		//labels
 
 		// label title
-		masterlabel titel = new masterlabel("question", white);
+		masterlabel titel = new masterlabel("analysis", white);
 
 
 		// buttons
@@ -49,10 +48,10 @@ public class question_screen_view {
 		masterbutton hado = new masterbutton("intro","introscreen",gray);
 
 		// button
-		masterbutton video = new masterbutton("question","questionscreen",darkGray);
+		masterbutton video = new masterbutton("question","questionscreen",gray);
 
-		// button
-		masterbutton analysis = new masterbutton("analysis","analysisscreen",gray);
+		//button
+		masterbutton analysis = new masterbutton("analysis","analysisscreen",darkGray);
 
 		// Add panels main screen
 		panelMain.add(panelMainNorth, BorderLayout.NORTH);
@@ -64,11 +63,11 @@ public class question_screen_view {
 		panelMainNorth.add(hado.getMasterbutton());
 		panelMainNorth.add(video.getMasterbutton());
 		panelMainNorth.add(analysis.getMasterbutton());
+
 		// add to panel center
 
 
 		// Return the panel to be added to the JFrame
 		return panelMain;
 	}
-
 }

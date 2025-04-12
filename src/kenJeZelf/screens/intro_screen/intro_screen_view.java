@@ -1,13 +1,13 @@
-package kenJeZelf.intro_screen;
+package kenJeZelf.screens.intro_screen;
 
-import kenJeZelf.model_all.masterbutton;
-import kenJeZelf.model_all.masterlabel;
+import kenJeZelf.models.model_all.masterbutton;
+import kenJeZelf.models.model_all.masterlabel;
+import kenJeZelf.models.model_all.mastertextfield;
 
 import javax.swing.*;
 import java.awt.*;
 
 import static java.awt.Color.*;
-import static java.awt.Color.gray;
 
 public class intro_screen_view {
 	public JPanel introscreen() {
@@ -36,8 +36,16 @@ public class intro_screen_view {
 
 		//labels
 
-		// label title
+		// label
 		masterlabel titel = new masterlabel("intro", white);
+
+		// label
+		masterlabel question = new masterlabel("what is your name", white);
+
+		//text fields
+
+		//text field
+		mastertextfield intro = new mastertextfield(black);
 
 
 		// buttons
@@ -54,6 +62,11 @@ public class intro_screen_view {
 		// button
 		masterbutton analysis = new masterbutton("analysis","analysisscreen",gray);
 
+		// button
+		masterbutton submit = new masterbutton("submit","",gray);
+		//action
+		submit.handeler(intro.getMastertextfield(),question);
+
 		// Add panels main screen
 		panelMain.add(panelMainNorth, BorderLayout.NORTH);
 		panelMain.add(panelMainCenter, BorderLayout.CENTER);
@@ -67,6 +80,10 @@ public class intro_screen_view {
 
 
 		// add to panel center
+		panelMainCenter.add(question.getMasterLabel());
+		panelMainCenter.add(intro.getMastertextfield());
+		panelMainCenter.add(submit.getMasterbutton());
+
 
 
 		// Return the panel to be added to the JFrame
